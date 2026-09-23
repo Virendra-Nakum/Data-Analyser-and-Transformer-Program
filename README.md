@@ -1,24 +1,27 @@
-# 📊 Data Analyser and Transformer Program
+# 📊 Data Analyzer and Transformer Program
 
 ## 📌 Project Description
 
-The **Data Analyser and Transformer Program** is a menu-driven Python application designed to perform basic data analysis and transformation operations on a one-dimensional dataset.
+The **Data Analyzer and Transformer Program** is a menu-driven Python application designed to perform basic data analysis and transformation operations on a one-dimensional dataset.
 
 This project demonstrates practical implementation of core Python programming concepts such as **functions, recursion, lambda functions, filtering, sorting, loops, conditional statements, built-in functions, and multiple return values**.
 
-The main purpose of this project is to strengthen Python programming fundamentals and apply them in a practical data-processing application.
+The project was developed to strengthen Python programming fundamentals and apply them in a practical data-processing application.
 
 ---
 
 ## ✨ Features
 
 ### 1. Input Data
+
 - Accepts numerical data from the user.
 - Supports multiple values separated by spaces.
 - Stores the data for further operations.
 
 ### 2. Data Summary
-Displays:
+
+Displays important information about the dataset:
+
 - Total number of elements
 - Minimum value
 - Maximum value
@@ -26,6 +29,7 @@ Displays:
 - Average value
 
 ### 3. Calculate Factorial
+
 - Calculates the factorial of a number.
 - Uses **recursion**.
 
@@ -38,7 +42,7 @@ Example:
 ### 4. Filter Data by Threshold
 
 * Takes a threshold value from the user.
-* Filters values greater than the threshold.
+* Filters values greater than the given threshold.
 * Uses a **Lambda Function** and Python's `filter()` function.
 
 ### 5. Sort Data
@@ -50,14 +54,14 @@ Provides two sorting options:
 
 ### 6. Display Dataset Statistics
 
-Calculates and returns multiple values:
+Calculates and returns multiple statistical values:
 
-* Minimum
-* Maximum
-* Sum
-* Average
+* Minimum value
+* Maximum value
+* Sum of all values
+* Average value
 
-This feature demonstrates **multiple return values from a Python function**.
+This feature demonstrates the use of **multiple return values from a Python function**.
 
 ### 7. Exit Program
 
@@ -68,7 +72,7 @@ Allows the user to safely exit the application.
 ## 🛠️ Technologies Used
 
 * **Python 3**
-* Python Functions
+* Functions
 * Lists
 * Loops
 * Conditional Statements
@@ -76,7 +80,8 @@ Allows the user to safely exit the application.
 * Lambda Functions
 * `filter()`
 * Built-in Functions
-* Formatted Strings (f-strings)
+* f-Strings
+* Multiple Return Values
 
 ### Built-in Functions Used
 
@@ -89,36 +94,19 @@ len()
 
 ---
 
-## 📂 Project Structure
- 
-│
-├── main.py
-├── README.md
-└── image.png
-
-### Files
-
-**`data_analyser.py`**
-Contains the complete source code of the Data Analyser and Transformer Program.
-
-**`README.md`**
-Contains the documentation and instructions for the project.
-
----
-
 ## ⚙️ Installation
 
 ### Prerequisites
 
 Make sure **Python 3.14.0** is installed on your computer.
 
-Check Python version:
+Check the Python version:
 
 ```bash
 python --version
 ```
 
-If Python is installed correctly, you will see something similar to:
+You should see something similar to:
 
 ```text
 Python 3.14.0
@@ -127,13 +115,13 @@ Python 3.14.0
 ### Clone the Repository
 
 ```bash
-git clone <your-github-repository-url>
+git clone https://github.com/Virendra-Nakum/Data-Analyser-and-Transformer-Program.git
 ```
 
-Go to the project folder:
+Go to the project directory:
 
 ```bash
-cd Data-Analyser-and-Transformer
+cd Data-Analyser-and-Transformer-Program
 ```
 
 ### Dependencies
@@ -148,17 +136,16 @@ This project uses only Python's built-in features.
 
 Open the project folder in VS Code or any Python-supported IDE.
 
-Run:
+Run the following command:
 
 ```bash
-python data_analyser.py
+python main.py
 ```
 
-The program will display:
+The program will display the main menu:
 
 ```text
 Main Menu:
-
 1. Input Data
 2. Data Summary (Built-in-Functions)
 3. Calculate Factorial (Recursion)
@@ -172,51 +159,104 @@ Enter the number according to the operation you want to perform.
 
 ---
 
-## 💻 Example
+## 🖥️ Example Console Interaction
 
-### Input Data
+### Step 1: Input Data
 
 ```text
-Enter Data for a 1D array (Separated By Spaces) :-
-10 25 50 75 100
+Welcome to The Data Analyzer and Transformer Program
+
+Main Menu:
+1. Input Data
+2. Data Summary (Built-in-Functions)
+3. Calculate Factorial (Recursion)
+4. Filter Data By Threshold (Lambda Function)
+5. Sort Data
+6. Display Data Set Statistics (Return Multiple Values)
+7. Exit Program
+
+Please Enter Your Choice :- 1
+
+Enter Data for a 1D array (Separated By Spaces) :- 34 12 56 78 43 21 90
+
+Data has been stored Successfully !
 ```
 
-### Data Summary
+### Step 2: Display Data Summary
 
 ```text
-Data Summary:
+Please Enter Your Choice :- 2
 
-- Total Elements : 5
-- Minimum Value  : 10
-- Maximum Value  : 100
-- Sum of all values: 260
-- Average Value  : 52.00
+Data Summary :
+- Total Elements : 7
+- Minimum Value  : 12
+- Maximum Value  : 90
+- Sum of all values: 334
+- Average Value  : 47.71
 ```
 
-### Filter Data
+### Step 3: Calculate Factorial
 
 ```text
-Enter a threshold value:- 50
+Please Enter Your Choice :- 3
 
-75, 100
-```
-
-### Factorial
-
-```text
-Enter a number to calculate its factorial :- 5
+Enter a number to calculate its factorial :-5
 
 Factorial of 5 is : 120
 ```
 
-### Sorting
+### Step 4: Filter Data by Threshold
 
 ```text
-1. Ascending.
-2. Descending.
+Please Enter Your Choice :- 4
+
+Enter a threshold value:- 50
+
+56, 78, 90
 ```
 
-The program sorts the dataset according to the selected option.
+### Step 5: Sort Data
+
+```text
+Please Enter Your Choice :- 5
+
+1. Ascending.
+2. Descending.
+
+Enter Your Choice:-1
+
+Sorted Data in Ascending order:
+[12, 21, 34, 43, 56, 78, 90]
+```
+
+### Step 6: Display Dataset Statistics
+
+```text
+Please Enter Your Choice :- 6
+
+Dataset Statistics:
+Minimum value : 12
+Maximum value : 90
+Sum of all value : 334
+Average value : 47.71
+```
+
+---
+
+## 🖼️ Program Output
+
+![Program Output](image.png)
+
+---
+
+## 📂 Project Structure
+
+```text
+│
+├── README.md
+├── image.png
+└── main.py
+```
 
 ---
 
@@ -240,57 +280,32 @@ This project demonstrates practical knowledge of:
 * Recursion
 * Multiple Return Values
 * f-Strings
+* Function Documentation using Docstrings
 
 ---
 
 ## 🎯 Learning Objectives
 
-The project was developed to apply Python concepts in a practical application.
+The main objective of this project is to apply Python programming concepts in a practical application.
 
 Through this project, the following skills are demonstrated:
 
 * Developing a menu-driven Python application
 * Creating reusable functions
 * Processing user input
-* Performing basic data analysis
-* Filtering and sorting datasets
+* Performing basic dataset analysis
+* Filtering and sorting data
 * Implementing recursive functions
 * Using lambda functions
 * Returning multiple values from functions
+* Documenting functions using docstrings
 * Organizing a Python program into logical components
 
 ---
 
-
-
-## Output
-
-![Program Output](image.png)
-
-
-
+ 
 ## 👨‍💻 Author
 
 **Virendra Nakum**
-
-**Aspiring Data Analyst | Data Scientist | AI/ML Enthusiast**
-
-Interested in:
-
-* Data Analytics
-* Data Science
-* Machine Learning
-* Artificial Intelligence
-* Real-World Data Projects
-
----
-
-## 📜 License
-
-This project is created for **learning, practice, and portfolio development purposes**.
-
----
-
-⭐ **If you find this project useful, consider giving the repository a star!**
 
  
