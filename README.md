@@ -1,148 +1,97 @@
-# 📊 Data Analyzer and Transformer Program
+# Data Analyzer and Transformer Program
 
 ## 📌 Project Description
 
-The **Data Analyzer and Transformer Program** is a menu-driven Python application designed to perform basic data analysis and transformation operations on a one-dimensional dataset.
+The **Data Analyzer and Transformer Program** is a Python-based console application designed to perform different operations on **1D and 2D array data**.
 
-This project demonstrates practical implementation of core Python programming concepts such as **functions, recursion, lambda functions, filtering, sorting, loops, conditional statements, built-in functions, and multiple return values**.
+This project demonstrates important Python programming concepts such as functions, loops, conditional statements, recursion, lambda functions, filtering, sorting, built-in functions, and returning multiple values from functions.
 
 The project was developed to strengthen Python programming fundamentals and apply them in a practical data-processing application.
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-### 1. Input Data
-
-- Accepts numerical data from the user.
-- Supports multiple values separated by spaces.
-- Stores the data for further operations.
-
-### 2. Data Summary
-
-Displays important information about the dataset:
-
-- Total number of elements
-- Minimum value
-- Maximum value
-- Sum of all values
-- Average value
-
-### 3. Calculate Factorial
-
-- Calculates the factorial of a number.
-- Uses **recursion**.
-
-Example:
-
-```text
-5! = 5 × 4 × 3 × 2 × 1 = 120
-````
-
-### 4. Filter Data by Threshold
-
-* Takes a threshold value from the user.
-* Filters values greater than the given threshold.
-* Uses a **Lambda Function** and Python's `filter()` function.
-
-### 5. Sort Data
-
-Provides two sorting options:
-
-* Ascending Order
-* Descending Order
-
-### 6. Display Dataset Statistics
-
-Calculates and returns multiple statistical values:
-
-* Minimum value
-* Maximum value
-* Sum of all values
-* Average value
-
-This feature demonstrates the use of **multiple return values from a Python function**.
-
-### 7. Exit Program
-
-Allows the user to safely exit the application.
+- Input and store **1D Array** data
+- Input and store **2D Array** data
+- Display Data Summary
+- Calculate minimum value
+- Calculate maximum value
+- Calculate sum of values
+- Calculate average value
+- Calculate factorial using **Recursion**
+- Filter data using **Lambda Function**
+- Sort data in:
+  - Ascending order
+  - Descending order
+- Display dataset statistics
+- Menu-driven console interface
 
 ---
 
 ## 🛠️ Technologies Used
 
-* **Python 3**
-* Functions
-* Lists
-* Loops
-* Conditional Statements
-* Recursion
-* Lambda Functions
-* `filter()`
-* Built-in Functions
-* f-Strings
-* Multiple Return Values
+- **Python 3**
+- Lists
+- Loops
+- Functions
+- Conditional Statements
+- Recursion
+- Lambda Functions
+- Filter Function
+- Built-in Functions
+- Multiple Return Values
+- 1D and 2D Arrays
 
-### Built-in Functions Used
+---
 
-```python
-sum()
-min()
-max()
-len()
-```
+## 📂 Project Structure
+
+```text
+
+│
+├── README.md
+├── image.png
+└── main.py
+````
 
 ---
 
 ## ⚙️ Installation
 
-### Prerequisites
+### Step 1: Install Python
 
-Make sure **Python 3.14.0** is installed on your computer.
+Make sure Python 3 is installed on your computer.
 
-Check the Python version:
+Check Python version:
 
 ```bash
 python --version
 ```
 
-You should see something similar to:
-
-```text
-Python 3.14.0
-```
-
-### Clone the Repository
+### Step 2: Clone the Repository
 
 ```bash
-git clone https://github.com/Virendra-Nakum/Data-Analyser-and-Transformer-Program.git
+git clone <your-repository-link>
 ```
 
-Go to the project directory:
+### Step 3: Open the Project Folder
 
 ```bash
-cd Data-Analyser-and-Transformer-Program
+cd Data-Analyzer-and-Transformer-Program
 ```
 
-### Dependencies
-
-This project uses only Python's built-in features.
-
-**No external libraries are required.**
-
----
-
-## ▶️ How to Run
-
-Open the project folder in VS Code or any Python-supported IDE.
-
-Run the following command:
+### Step 4: Run the Program
 
 ```bash
 python main.py
 ```
 
-The program will display the main menu:
+---
+
+## ▶️ How to Use
+
+After running the program, the main menu will appear:
 
 ```text
 Main Menu:
@@ -154,92 +103,102 @@ Main Menu:
 6. Display Data Set Statistics (Return Multiple Values)
 7. Exit Program
 ```
-
-Enter the number according to the operation you want to perform.
 
 ---
 
-## 🖥️ Example Console Interaction
+## 📊 Example
 
-### Step 1: Input Data
+### Step 1: Input 1D Data
 
 ```text
-Welcome to The Data Analyzer and Transformer Program
+1. 1D Array
+2. 2D Array
 
-Main Menu:
-1. Input Data
-2. Data Summary (Built-in-Functions)
-3. Calculate Factorial (Recursion)
-4. Filter Data By Threshold (Lambda Function)
-5. Sort Data
-6. Display Data Set Statistics (Return Multiple Values)
-7. Exit Program
+Enter your Choice: 1
 
-Please Enter Your Choice :- 1
-
-Enter Data for a 1D array (Separated By Spaces) :- 34 12 56 78 43 21 90
-
-Data has been stored Successfully !
+Enter Data for a 1D array (Separated By Spaces):
+12 34 56 67 98 23 54 78 37 74 77
 ```
 
-### Step 2: Display Data Summary
+### Step 2: Data Summary
 
 ```text
-Please Enter Your Choice :- 2
-
-Data Summary :
-- Total Elements : 7
-- Minimum Value  : 12
-- Maximum Value  : 90
-- Sum of all values: 334
-- Average Value  : 47.71
+Data Summary:
+- Total Elements   : 11
+- Minimum Value    : 12
+- Maximum Value    : 98
+- Sum of all values: 610
+- Average Value    : 55.45
 ```
 
 ### Step 3: Calculate Factorial
 
 ```text
-Please Enter Your Choice :- 3
+Enter a number to calculate its factorial: 9
 
-Enter a number to calculate its factorial :-5
-
-Factorial of 5 is : 120
+Factorial of 9 is: 362880
 ```
 
-### Step 4: Filter Data by Threshold
+### Step 4: Filter Data
 
 ```text
-Please Enter Your Choice :- 4
+Enter a threshold value: 50
 
-Enter a threshold value:- 50
-
-56, 78, 90
+56, 67, 98, 54, 78, 74, 77
 ```
 
 ### Step 5: Sort Data
 
 ```text
-Please Enter Your Choice :- 5
-
-1. Ascending.
-2. Descending.
-
-Enter Your Choice:-1
-
 Sorted Data in Ascending order:
-[12, 21, 34, 43, 56, 78, 90]
+
+[12, 23, 34, 37, 54, 56, 67, 74, 77, 78, 98]
 ```
 
-### Step 6: Display Dataset Statistics
+### Step 6: Dataset Statistics
 
 ```text
-Please Enter Your Choice :- 6
-
 Dataset Statistics:
-Minimum value : 12
-Maximum value : 90
-Sum of all value : 334
-Average value : 47.71
+- Minimum Value  : 12
+- Maximum Value  : 98
+- Sum of all values: 610
+- Average Value  : 55.45
 ```
+
+---
+
+## 🔢 2D Array Example
+
+The program also supports 2D arrays.
+
+Example:
+
+```text
+1. 1D Array
+2. 2D Array
+
+Enter your Choice: 2
+
+Enter Number of Rows: 2
+Enter Number of Columns: 3
+
+Enter Number Value: 10
+Enter Number Value: 20
+Enter Number Value: 30
+
+Enter Number Value: 40
+Enter Number Value: 50
+Enter Number Value: 60
+```
+
+The stored 2D data will be:
+
+```text
+[[10, 20, 30],
+ [40, 50, 60]]
+```
+
+The program can perform summary, filtering, sorting, and statistics operations on the 2D data.
 
 ---
 
@@ -249,63 +208,28 @@ Average value : 47.71
 
 ---
 
-## 📂 Project Structure
-
-```text
-│
-├── README.md
-├── image.png
-└── main.py
-```
-
----
-
-## 🧠 Python Concepts Demonstrated
-
-This project demonstrates practical knowledge of:
-
-* Variables
-* Lists
-* Functions
-* Global Variables
-* User Input
-* Type Conversion
-* `for` Loop
-* `while` Loop
-* `if`, `elif`, `else`
-* Built-in Functions
-* Lambda Functions
-* `filter()`
-* Sorting
-* Recursion
-* Multiple Return Values
-* f-Strings
-* Function Documentation using Docstrings
-
----
-
 ## 🎯 Learning Objectives
 
-The main objective of this project is to apply Python programming concepts in a practical application.
+Through this project, I practiced:
 
-Through this project, the following skills are demonstrated:
-
-* Developing a menu-driven Python application
-* Creating reusable functions
-* Processing user input
-* Performing basic dataset analysis
-* Filtering and sorting data
-* Implementing recursive functions
-* Using lambda functions
-* Returning multiple values from functions
-* Documenting functions using docstrings
-* Organizing a Python program into logical components
+* Python fundamentals
+* Working with 1D and 2D arrays
+* Nested loops
+* Functions
+* Recursion
+* Lambda functions
+* Data filtering
+* Data sorting
+* Built-in Python functions
+* Multiple return values
+* Menu-driven programming
+* Problem-solving skills
 
 ---
 
- 
+
+
 ## 👨‍💻 Author
 
 **Virendra Nakum**
-
  
