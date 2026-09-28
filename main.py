@@ -3,8 +3,6 @@ print("Welcome to The Data Analyzer and Transformer Program")
 
 data = []
 
-
-
 def input_data():
     """Get input from user and store in 1D or 2D Array"""
     global data
@@ -49,10 +47,10 @@ def input_data():
 def converter(data):
     """Flatten nested row data into a 1D list when needed."""
     if len(data)>0 and isinstance(data[0],list):
-        flat_values=[]
+        values=[]
         for i in data:
-            flat_values.extend(i)
-        return flat_values
+            values.extend(i)
+        return values
     else:
         return data
 
@@ -144,9 +142,6 @@ def data_statistics(*value):
     return minimum, maximum, total, average
     
 
-
-
-
 while True:
 
     print()
@@ -164,21 +159,28 @@ while True:
     print()
 
     if choice == 1:
+        print(input_data.__doc__)
         input_data()
 
     elif choice == 2:
+        print(data_summary.__doc__)
         data_summary()
 
     elif choice == 3:
+        print(Fact_data.__doc__)
         Fact_data()
 
     elif choice == 4:
+        print(Thresold_data.__doc__)
         Thresold_data()
 
     elif choice == 5:
+        print(sort_data.__doc__)
         sort_data()
 
     elif choice == 6:
+        print(data_statistics.__doc__)
+
         values=converter(data)
         minimum, maximum, total, average = data_statistics(*values)
         print(f"- Minimum Value: {minimum}")
