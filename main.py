@@ -1,155 +1,193 @@
-print("welcome to the data analayzer and transformer program! ")
-data=[]
+
+print("Welcome to The Data Analyzer and Transformer Program")
+
+data = []
+
+
+
 def input_data():
-    """Take 1D array input from the user and store the data."""
-    global data 
-    print("Select option :")
-    print("1. Input data for 1D array")
-    print("2. Input data for 2D array")
-    choice = int(input("Enter your choice: ")) 
+    """Get input from user and store in 1D or 2D Array"""
+    global data
+
+    print("Select an Option:")
+    print("1. 1D Array")
+    print("2. 2D Array")
+
+    choice = int(input("Enter Your Choice: "))
+
+   
+
     if choice == 1:
-        values=input("enter data for a 1D array (separated by spaces)\n")
-        data =list(map(int,values.split()))
-        print("Data has been stored successfully")
+        
+        """Get input from user and store in 1D Array"""
+       
+
+        entered_values = input("Enter data for a 1D array (Separated By Spaces): ").split()
+
+        data = list(map(int, entered_values))
+        
+
+        print("Data has been stored successfully!")
 
     elif choice == 2:
-        rows = int(input("Enter number of rows: "))
-        cols = int(input("Enter number of columns: "))
+        """Get input from user and store in 2D Array"""
+        
 
-        data = []
+        rows = int(input("Enter Number Of Rows: "))
+        cols = int(input("Enter Number Of Columns: "))
 
-        for row in range(rows):
+        for i in range(rows):
             row = []
-            for col in range(cols):
-                value = int(input("Enter value: "))
-                row.append(value)
-            data.extend(row)
 
-        print("2D array stored successfully!")
- 
-def display_summary():
-        """Display basic summary of the dataset using built-in functions."""
-    
-        print("\nData Summary")
-        print(f"- Total Element :- {len(data)}")
-        print(f"- Minimum Value :- {min(data)}")
-        print(f"- Maximum Value :- {max(data)}")
-        print(f"- Sum Of All Element :- {sum(data)}")
-        print(f"- Average Value :- {sum(data) / len(data)}")
+            for j in range(cols):
+                num = int(input("Enter The Number: "))
+                row.append(num)
 
-def fact(num):
-    """Calculate factorial of a number using recursion."""
-    if num <=1:
-         return 1
+            data.append(row)
+
+        
+def converter(data):
+    """Flatten nested row data into a 1D list when needed."""
+    if len(data)>0 and isinstance(data[0],list):
+        flat_values=[]
+        for i in data:
+            flat_values.extend(i)
+        return flat_values
     else:
-         return num*fact(num-1)
+        return data
+
+def data_summary():
+    """Display a summary of the current dataset."""
+
+    values=converter(data)
+   
+    print("Data Summary:")
+    print(f"- Total Elements: {len(values)}")
+    print(f"- Minimum Value: {min(values)}")
+    print(f"- Maximum Value: {max(values)}")
+    print(f"- Sum of all values: {sum(values)}")
+    print(f"- Average Value: {sum(values) / len(values):.2f}")
+    print()
 
 
-def filter_data():
-    """Filter data based on a threshold value using a lambda function."""
-    if len(data) == 0:
-        print("No data found!")
-        return 
+def fact(n):
+    """Calculate Factorial"""
+
+    if n < 0:
+        return None
+
+    if n == 0 or n == 1:
+        return 1
+
+    return n * fact(n - 1)
+
+
+def Fact_data():
+    """Calculate Factorial of a number using recursion."""
+    num = int(input("Enter Your Number for Factorial: "))
+
+    if num < 0:
+        print("Factorial is not defined for negative numbers.")
+        return
+
+    res = fact(num)
+    print(f"Factorial of {num} is: {res}")
+
+
+def Thresold_data():
+    """Filter and display values greater than the threshold."""
+    values=converter(data)
     
-    threshold = int(input("Enter a threshold value to filer out the data: "))
-    fil_data = list((filter(lambda i: i >=threshold,data)))
-    print(f"Filtered Data (values >= {threshold}): {fil_data}")
+
+    value = int(input("Enter a threshold value: "))
+
+    ans = filter(lambda x: x > value, values)
+    print(*ans,sep=", ")
+    
+    print("Values greater than threshold:")
+    
 
 
 def sort_data():
-    """Sort the data in ascending or descending order based on user choice."""
-    if data is None:
-            print("Please input data first!")
-            return
-    
-    print("\nChoose sorting option:")
+    """Sort the dataset in ascending or descending order."""
+
+    values=converter(data)
+
+    print("Select An Option (1-2):")
     print("1. Ascending")
     print("2. Descending")
-    
-    choice = int(input("Enter your choice: "))
-    
+
+    choice = int(input("Enter Your Choice: "))
+
     if choice == 1:
-        sorted_data = sorted(data)
-    
-        print("\nSorted Data in Ascending Order:")
-        print(sorted_data)
-    
+        values.sort()
+        print("Sorted data in Ascending order:")
+        print(values)
+
     elif choice == 2:
-        sorted_data = sorted(data, reverse=True)
-    
-        print("\nSorted Data in Descending Order:")
-        print(sorted_data)
-    
+        values.sort(reverse=True)
+        print("Sorted data in Descending order:")
+        print(values)
+
     else:
-        print("Invalid sorting choice!")
-    
-def dataset_statistics(data):
-    """Return minimum, maximum, sum and average as multiple values."""
-    minimum = min(data)
-    maximum = max(data)
-    total = sum(data)
-    average = total / len(data)
+        print("Invalid Choice!!")
+
+
+def data_statistics(*value):
+    """Return minimum, maximum, total, and average values."""
+    print("Data Statistics : ")
+    minimum = min(value)
+    maximum = max(value)
+    total = sum(value)
+    average = sum(value) / len(value) 
+
     return minimum, maximum, total, average
-
-def display_dataset_statistics():
-    """Display dataset statistics using the dataset_statistics function."""
-    if len(data) == 0:
-        print("No data found!")
-        return
     
-    minimum, maximum, total, average = dataset_statistics(data)
-    
-    print("\nDataset Statistics:")
-    print("Minimum Value:", minimum)
-    print("Maximum Value:", maximum)
-    print("Sum of Values:", total)
-    print("Average Value:", round(average, 2))
 
-while True :
-    print("\nSelect option :")
-    print("1.Input data")
-    print("2.Display data summary")
-    print("3.Calculate factorial")
-    print("4.Filter data by Threshold (Lambda Function)")
-    print("5.Sort Data")
-    print("6.Display Dataset Statistics (Return Multiple Values)")
-    print("7.Exit")
 
-    choice=int(input("enter your choicee :"))
 
-    if choice == 1 :
-        print(input_data.__doc__)
+
+while True:
+
+    print()
+    print("Main Menu:")
+    print("1. Input Data")
+    print("2. Data Summary (Built-in Functions)")
+    print("3. Calculate Factorial (Recursion)")
+    print("4. Filter Data By Threshold (Lambda Function)")
+    print("5. Sort Data")
+    print("6. Display Data Set Statistics (Return Multiple Values)")
+    print("7. Exit Program")
+    print()
+
+    choice = int(input("Please Enter Your Choice: "))
+    print()
+
+    if choice == 1:
         input_data()
 
     elif choice == 2:
-         print(display_summary.__doc__)
-         display_summary()
+        data_summary()
 
-    elif choice== 3:
-        print(fact.__doc__)
-        num = int(input("Enter a number: "))
-        if num <0:
-            print("Factorial is not possible!")
-
-        else:
-            result = fact(num)
-            print(f"Factorial of {num} is: {result}")
+    elif choice == 3:
+        Fact_data()
 
     elif choice == 4:
-         print(filter_data.__doc__)
-         filter_data()
+        Thresold_data()
 
     elif choice == 5:
-        print(sort_data.__doc__)
         sort_data()
 
     elif choice == 6:
-        print(display_dataset_statistics.__doc__)
-        display_dataset_statistics()
-        
-    elif choice == 7 :
-        print("Exiting!\nThank You For Using Data Analyzer And Transformer Program")
+        values=converter(data)
+        minimum, maximum, total, average = data_statistics(*values)
+        print(f"- Minimum Value: {minimum}")
+        print(f"- Maximum Value: {maximum}")
+        print(f"- Sum of all values: {total}")
+        print(f"- Average Value: {average:.2f}")
+    elif choice == 7:
+        print("Thank you for using The Data Analyzer and Transformer Program.")
         break
-         
-    else : 
-        print("Invalid Choice")
+
+    else:
+        print("Invalid Choice!!")
