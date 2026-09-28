@@ -204,7 +204,7 @@ The program can perform summary, filtering, sorting, and statistics operations o
 
 ## 🖼️ Program Output
 
-![Program Output](output..png)
+![Program Output](output.png)
 
 ---
 
