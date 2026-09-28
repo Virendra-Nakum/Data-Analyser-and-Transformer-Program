@@ -51,8 +51,8 @@ The project was developed to strengthen Python programming fundamentals and appl
 
 │
 ├── README.md
-├──output.png
-└── main.py
+├── main.py
+└── output.png
 ````
 
 ---
