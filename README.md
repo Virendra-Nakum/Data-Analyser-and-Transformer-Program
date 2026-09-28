@@ -51,7 +51,7 @@ The project was developed to strengthen Python programming fundamentals and appl
 
 │
 ├── README.md
-├── image.png
+├──output.png
 └── main.py
 ````
 
@@ -204,7 +204,7 @@ The program can perform summary, filtering, sorting, and statistics operations o
 
 ## 🖼️ Program Output
 
-![Program Output](image.png)
+![Program Output](output..png)
 
 ---
 
